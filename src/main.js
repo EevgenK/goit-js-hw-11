@@ -14,8 +14,8 @@ const refs = {
 //   window.location.hostname === '127.0.0.1' && window.location.port === '5173';
 // console.log(isLocal);
 // const iconUrl = isLocal
-//   ? './img/error.svg'
-//   : 'https://eevgenk.github.io/goit-js-hw-11/src/img/error.svg';
+//   ? './img/error.png'
+//   : 'https://raw.githubusercontent.com/EevgenK/goit-js-hw-11/main/src/img/error.png';
 
 const errorMessege = str =>
   iziToast.warning({
@@ -23,7 +23,8 @@ const errorMessege = str =>
     position: 'topRight',
     backgroundColor: '#EF4040',
     messageColor: '#FAFAFB',
-    iconUrl: './img/error.png',
+    iconUrl:
+      'https://raw.githubusercontent.com/EevgenK/goit-js-hw-11/main/src/img/error.png',
     messageSize: '16px',
     messageLineHeight: '24px',
     maxWidth: '432px',
