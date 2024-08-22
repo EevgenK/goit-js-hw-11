@@ -23,7 +23,7 @@ const errorMessege = str =>
     position: 'topRight',
     backgroundColor: '#EF4040',
     messageColor: '#FAFAFB',
-    iconUrl: './img/err.svgпшф',
+    iconUrl: './img/err.svg',
     messageSize: '16px',
     messageLineHeight: '24px',
     maxWidth: '432px',
