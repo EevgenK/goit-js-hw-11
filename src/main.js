@@ -10,13 +10,20 @@ const refs = {
   gallery: document.querySelector('.gallery'),
 };
 
+const isLocal =
+  window.location.hostname === '127.0.0.1' && window.location.port === '5173';
+console.log(isLocal);
+const iconUrl = isLocal
+  ? './img/error.svg'
+  : 'https://eevgenk.github.io/goit-js-hw-11/src/img/error.svg';
+
 const errorMessege = str =>
   iziToast.warning({
     message: str,
     position: 'topRight',
     backgroundColor: '#EF4040',
     messageColor: '#FAFAFB',
-    iconUrl: './img/error.svg',
+    iconUrl: iconUrl,
     messageSize: '16px',
     messageLineHeight: '24px',
     maxWidth: '432px',
