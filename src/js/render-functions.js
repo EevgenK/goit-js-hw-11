@@ -1,4 +1,5 @@
-// import iziToast from 'izitoast';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 const render = (element, obj) => {
   const markup = obj
     .map(
@@ -35,5 +36,18 @@ const renderLoader = element => {
   element.insertAdjacentHTML('afterend', markup);
 };
 const clearMarkup = element => (element.innerHTML = '');
+const errorMessege = str =>
+  iziToast.warning({
+    message: str,
+    position: 'topRight',
+    backgroundColor: '#EF4040',
+    messageColor: '#FAFAFB',
+    iconUrl:
+      'https://raw.githubusercontent.com/EevgenK/goit-js-hw-11/main/src/img/error.png',
+    messageSize: '16px',
+    messageLineHeight: '24px',
+    maxWidth: '432px',
+    theme: 'dark',
+  });
 
-export { render, clearMarkup, renderLoader };
+export { render, clearMarkup, renderLoader, errorMessege };
