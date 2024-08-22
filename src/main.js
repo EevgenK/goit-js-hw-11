@@ -1,18 +1,27 @@
+import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { getPixabayApi } from './js/pixabay-api';
-import {
-  render,
-  clearMarkup,
-  renderLoader,
-  errorMessege,
-} from './js/render-functions';
+import { render, clearMarkup, renderLoader } from './js/render-functions';
 
 const refs = {
   form: document.querySelector('.search-form'),
   gallery: document.querySelector('.gallery'),
 };
+
+const errorMessege = str =>
+  iziToast.warning({
+    message: str,
+    position: 'topRight',
+    backgroundColor: '#EF4040',
+    messageColor: '#FAFAFB',
+    iconUrl: './img/error.svg',
+    messageSize: '16px',
+    messageLineHeight: '24px',
+    maxWidth: '432px',
+    theme: 'dark',
+  });
 const lightbox = new SimpleLightbox('.gallery a', {
   /* options */
   captionsData: 'alt',

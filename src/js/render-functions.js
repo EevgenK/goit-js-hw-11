@@ -1,4 +1,4 @@
-import iziToast from 'izitoast';
+// import iziToast from 'izitoast';
 const render = (element, obj) => {
   const markup = obj
     .map(
@@ -36,17 +36,4 @@ const renderLoader = element => {
 };
 const clearMarkup = element => (element.innerHTML = '');
 
-const errorMessege = str =>
-  iziToast.warning({
-    message: str,
-    position: 'topRight',
-    backgroundColor: '#EF4040',
-    messageColor: '#FAFAFB',
-    iconUrl: '../img/error.svg',
-    messageSize: '16px',
-    messageLineHeight: '24px',
-    maxWidth: '432px',
-    theme: 'dark',
-  });
-
-export { render, clearMarkup, renderLoader, errorMessege };
+export { render, clearMarkup, renderLoader };
