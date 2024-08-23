@@ -22,7 +22,8 @@ const lightbox = new SimpleLightbox('.gallery a', {
 const onSearch = e => {
   e.preventDefault();
   const targetForm = e.currentTarget;
-  const searchedEl = targetForm.input.value;
+  const searchedEl = targetForm.input.value.trim();
+  console.log('str', searchedEl);
   if (!searchedEl) {
     return errorMessege(
       `There's nothing to search. Please, type the query target first!`
